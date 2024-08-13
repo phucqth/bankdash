@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/bankdash/static/css/main.5093bb53.css",
+    "main.js": "/bankdash/static/js/main.b1c0674a.js",
+    "index.html": "/bankdash/index.html",
+    "main.5093bb53.css.map": "/bankdash/static/css/main.5093bb53.css.map",
+    "main.b1c0674a.js.map": "/bankdash/static/js/main.b1c0674a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5093bb53.css",
+    "static/js/main.b1c0674a.js"
+  ]
+}
