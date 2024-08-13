@@ -1,4 +1,4 @@
-const logo = '/Logo.svg';
+const logo = '/logo.svg';
 const setting = '/icons/setting.svg';
 const bell = '/icons/bell.svg';
 const search = '/icons/search.svg';
