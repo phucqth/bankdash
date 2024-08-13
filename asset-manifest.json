@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/bankdash/static/css/main.5093bb53.css",
-    "main.js": "/bankdash/static/js/main.a3796c12.js",
+    "main.css": "/bankdash/static/css/main.a5fe47a7.css",
+    "main.js": "/bankdash/static/js/main.b35686fe.js",
     "index.html": "/bankdash/index.html",
-    "main.5093bb53.css.map": "/bankdash/static/css/main.5093bb53.css.map",
-    "main.a3796c12.js.map": "/bankdash/static/js/main.a3796c12.js.map"
+    "main.a5fe47a7.css.map": "/bankdash/static/css/main.a5fe47a7.css.map",
+    "main.b35686fe.js.map": "/bankdash/static/js/main.b35686fe.js.map"
   },
   "entrypoints": [
-    "static/css/main.5093bb53.css",
-    "static/js/main.a3796c12.js"
+    "static/css/main.a5fe47a7.css",
+    "static/js/main.b35686fe.js"
   ]
 }
