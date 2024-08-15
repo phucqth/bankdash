@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import {
     logo,
     home,
@@ -10,20 +11,22 @@ import {
     econometrics,
     settingsSolid,
 } from '../ultis/Image';
+import './sidebar.scss';
 const Sidebar = () => {
     return (
         <div className='sidebar'>
-            <div className='logo'>
+            <NavLink className='logo' to='/'>
                 <img src={logo} alt='logo' />
-            </div>
+            </NavLink>
             <div className='menu'>
                 {menuArray.map((item, index) => {
                     return (
-                        <div
-                            className={`menu-btn ${
-                                index === 1 ? 'active' : ''
-                            }`}
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? 'menu-btn  active' : 'menu-btn'
+                            }
                             key={index}
+                            to={item.link}
                         >
                             <img
                                 src={item.icon}
@@ -31,7 +34,7 @@ const Sidebar = () => {
                                 className='menu-icon'
                             />
                             {item.title}
-                        </div>
+                        </NavLink>
                     );
                 })}
             </div>

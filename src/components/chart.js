@@ -1,4 +1,4 @@
-import { Line, Pie } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -8,7 +8,6 @@ import {
     Title,
     Tooltip,
     Legend,
-    PieController,
 } from 'chart.js';
 
 ChartJS.register(
@@ -18,21 +17,34 @@ ChartJS.register(
     LineElement,
     Title,
     Tooltip,
-    Legend,
-    PieController
+    Legend
 );
 
 const LineChart = () => {
     return <Line data={chartData} options={options} />;
 };
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+
+const labels = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+];
 
 const chartData = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: labels,
     datasets: [
         {
             label: 'Balance',
-            data: labels.map(() => Math.floor(Math.random() * 800) + 1),
+            data: labels.map(() => Math.floor(Math.random() * 601) + 200),
             fill: false,
             borderColor: 'blue',
             tension: 0.1,
@@ -43,15 +55,22 @@ const chartData = {
 const options = {
     scales: {
         y: {
-            beginAtZero: true,
-            max: 800,
+            border: { dash: [4, 4] },
+            beginAtZero: false,
             type: 'linear',
+        },
+        x: {
+            border: { dash: [4, 4] },
         },
     },
     plugins: {
         legend: {
             display: false,
         },
+    },
+    maintainAspectRatio: false,
+    layout: {
+        padding: 30,
     },
 };
 
