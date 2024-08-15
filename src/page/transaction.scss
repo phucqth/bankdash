@@ -1,0 +1,67 @@
+@import '../styles/mixin.scss';
+
+table {
+    border: none;
+    border-collapse: collapse;
+    color: #000;
+}
+
+th,
+td {
+    border: none;
+    padding-block: 15px;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+    }
+
+    .download {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        border: 1px solid #DFEAF2;
+        width: 100px;
+        height: 30px;
+    }
+}
+
+tr {
+    border: none;
+    border-bottom: 1pt solid #F2F4F7;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+}
+
+.hide-in-mobile {
+    @include mobile {
+        display: none;
+    }
+}
+
+.expense {
+    text-align: right;
+    color: #FE5C73;
+}
+
+.income {
+    text-align: right;
+    color: #16DBAA;
+}
+
+.item-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.large-section-title {
+    display: flex;
+    margin-block: 24px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}

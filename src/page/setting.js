@@ -1,33 +1,59 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Card from '../components/card';
 import './setting.scss';
+import { pencilEdit } from '../ultis/Image';
+import NavTab from '../components/nav-tab';
 const SettingPage = () => {
-    const [choose, setChoose] = useState('nav-item-0');
-    const navList = ['Edit Profile', 'Preferences', 'Security'];
-    return (
-        <Card>
-            <div className='nav'>
-                {navList.map((item, index) => {
-                    return (
-                        <div
-                            key={index}
-                            className={`nav-item ${
-                                choose === `nav-item-${index}` ? 'active' : ''
-                            }`}
-                            onClick={() => setChoose(`nav-item-${index}`)}
-                        >
-                            {item}
-                        </div>
-                    );
-                })}
-            </div>
-            {choose === 'nav-item-0' && (
+    const [selectedFile, setSelectedFile] = useState(null);
+    const fileInputRef = useRef(null);
+    const handleFileChange = (event) => {
+        const file = event.target.files[0];
+
+        if (file.type !== 'image/png' && file.type !== 'image/jpeg') {
+            alert('Please select a PNG or JPEG image file.');
+            return;
+        }
+
+        if (file.size > 1024 * 1024) {
+            alert('File size should not exceed 1MB.');
+            return;
+        }
+
+        setSelectedFile(event.target.files[0]);
+    };
+    const handleChangeAvatar = () => {
+        fileInputRef.current.click();
+    };
+    const navList = [
+        {
+            name: 'Profile',
+            component: (
                 <div className='setting-content'>
-                    <img
-                        src='https://i.pravatar.cc/300'
-                        alt='avatar'
-                        className='setting-avt'
-                    />
+                    <div className='setting-avt-group'>
+                        <img
+                            src={
+                                (selectedFile &&
+                                    URL.createObjectURL(selectedFile)) ||
+                                'https://i.pravatar.cc/300'
+                            }
+                            alt='avatar'
+                            className='setting-avt'
+                        />
+                        <div
+                            className='btn-edit'
+                            onClick={() => {
+                                handleChangeAvatar();
+                            }}
+                        >
+                            <input
+                                label='Edit'
+                                type='file'
+                                onChange={handleFileChange}
+                                ref={fileInputRef}
+                            />
+                            <img src={pencilEdit} alt='edit' />
+                        </div>
+                    </div>
                     <div className='setting-form'>
                         <div className='form-group'>
                             <label>Your Name</label>
@@ -70,8 +96,11 @@ const SettingPage = () => {
                         </div>
                     </div>
                 </div>
-            )}
-            {choose === 'nav-item-1' && (
+            ),
+        },
+        {
+            name: 'Preferences',
+            component: (
                 <>
                     <div className='preference-form'>
                         <div className='form-group'>
@@ -84,10 +113,21 @@ const SettingPage = () => {
                         </div>
                     </div>
                     <div>Notification</div>
-                    <div className='btn-save'>Save</div>
+                    <div className='form-group'>
+                        <div className='btn-save'>Save</div>
+                    </div>
                 </>
-            )}
-            {choose === 'nav-item-2' && <div>Security</div>}
+            ),
+        },
+        {
+            name: 'Security',
+            component: <div>Security</div>,
+        },
+    ];
+
+    return (
+        <Card>
+            <NavTab list={navList} />
         </Card>
     );
 };

@@ -1,3 +1,5 @@
+	@import '../styles/mixin.scss';
+
 .nav {
     display: flex;
     flex-direction: row;
@@ -29,10 +31,48 @@
     justify-content: space-between;
     align-items: start;
 
-    .setting-avt {
-        width: 130px;
-        height: 130px;
-        border-radius: 50%;
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .setting-avt-group {
+        position: relative;
+
+        .setting-avt {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+
+        }
+
+        .btn-edit {
+            position: absolute;
+            right: -2px;
+            bottom: 16px;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            background-color: #1814F3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            input {
+                display: none;
+            }
+
+            img {
+                width: 15px;
+                height: 15px;
+            }
+        }
     }
 
     .setting-form {
@@ -41,11 +81,22 @@
         justify-content: space-between;
         width: calc(418px * 2 + 29px);
 
+        @include mobile {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+
         .form-group {
             display: flex;
             flex-direction: column;
             margin-bottom: 22px;
             width: 418px;
+
+            @include mobile {
+                width: 100%;
+            }
 
             label {
                 color: #000;
@@ -119,5 +170,5 @@
     border-radius: 15px;
     background-color: #1814F3;
     color: #fff;
-	cursor: pointer;
+    cursor: pointer;
 }

@@ -5,6 +5,7 @@ import DefaultLayout from './layout/default-layout';
 import './styles/global.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import SettingPage from './page/setting';
+import TransactionPage from './page/transaction';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
@@ -12,6 +13,7 @@ root.render(
             <DefaultLayout>
                 <Routes>
                     <Route path='/' element={<MainPage />} />
+                    <Route path='/transactions' element={<TransactionPage />} />
                     <Route path='/settings' element={<SettingPage />} />
                 </Routes>
             </DefaultLayout>

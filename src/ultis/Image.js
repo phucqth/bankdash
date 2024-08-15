@@ -19,6 +19,7 @@ const hamburger = PUBLIC_URL + '/icons/hamburger.svg';
 const econometrics = PUBLIC_URL + '/icons/econometrics.svg';
 const send = PUBLIC_URL + '/icons/send.svg';
 const next = PUBLIC_URL + '/icons/next.svg';
+const pencilEdit = PUBLIC_URL + '/icons/pencil-edit.svg';
 export {
     logo,
     setting,
@@ -39,4 +40,5 @@ export {
     hamburger,
     send,
     next,
+    pencilEdit,
 };

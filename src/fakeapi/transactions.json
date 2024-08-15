@@ -1,0 +1,52 @@
+[
+    {
+        "Description": "Spotify Subscription",
+        "Transaction ID": "#12548796",
+        "Type": "Shopping",
+        "Card": "1234 ****",
+        "Date": "28 Jan, 12.30 AM",
+        "Amount": "-$2,500",
+        "Receipt": "download_link",
+        "TransactionType": "expense"
+    },
+    {
+        "Description": "Netflix Subscription",
+        "Transaction ID": "#98765432",
+        "Type": "Entertainment",
+        "Card": "5678 ****",
+        "Date": "15 Feb, 3.45 PM",
+        "Amount": "+$1,200",
+        "Receipt": "download_link",
+        "TransactionType": "income"
+    },
+    {
+        "Description": "Amazon Purchase",
+        "Transaction ID": "#54321678",
+        "Type": "Shopping",
+        "Card": "9101 ****",
+        "Date": "10 Mar, 11.00 AM",
+        "Amount": "+$3,750",
+        "Receipt": "download_link",
+        "TransactionType": "income"
+    },
+    {
+        "Description": "Uber Ride",
+        "Transaction ID": "#67891234",
+        "Type": "Transport",
+        "Card": "1121 ****",
+        "Date": "22 Apr, 9.15 PM",
+        "Amount": "-$500",
+        "Receipt": "download_link",
+        "TransactionType": "expense"
+    },
+    {
+        "Description": "Apple Music",
+        "Transaction ID": "#34567890",
+        "Type": "Entertainment",
+        "Card": "3141 ****",
+        "Date": "05 May, 8.00 AM",
+        "Amount": "-$1,000",
+        "Receipt": "download_link",
+        "TransactionType": "expense"
+    }
+]

@@ -1,0 +1,25 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    border-bottom: #F4F5F7 1px solid;
+    margin-bottom: 52px;
+
+    .nav-item {
+        height: 36px;
+        // width: 114px;
+        padding-inline: 10px;
+        border-bottom: 3px solid transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .active {
+        border-bottom: 3px solid #0026ff;
+        font-weight: 800;
+        color: #0026ff;
+
+    }
+}

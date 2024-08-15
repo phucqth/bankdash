@@ -8,10 +8,36 @@ html {
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    // max-width: 1440px;
     background-color: #f5f7fa;
+    overflow-y: auto;
 }
 
 img {
     -webkit-user-drag: none;
+    user-select: none;
+}
+
+/* Designing for scroll-bar */
+
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: gainsboro;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Vertical scrollbar */
+::-webkit-scrollbar {
+    width: 1px;
 }
