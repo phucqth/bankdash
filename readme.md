@@ -6,6 +6,10 @@ A modern bank account dashboard built with React
 
 Bank Dash is a web application designed to provide a user-friendly interface for managing bank accounts. Our goal is to make it easy for users to track their account balances, transactions, and other financial information in one place.
 
+## Demo
+
+Try out Bank Dash live at [bankdash-three.vercel.app](https://bankdash-three.vercel.app).
+
 ## Features
 
 -   Account dashboard with real-time balance updates
